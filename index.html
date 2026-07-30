@@ -198,6 +198,9 @@
 
   @media (max-width:700px){
     .exp-card{ grid-template-columns:1fr; }
+    .ds-row{ grid-template-columns:1fr; }
+    .ds-label{ padding:12px 18px; }
+    .ds-value{ padding:12px 18px; }
     .nav-links{ display:none; }
     .trace-svg{ display:none; }
   }
@@ -277,11 +280,17 @@
       
       <div class="card fade-in">
         <div class="card-top"><span class="designator">U1</span><span class="status done" data-i18n="status.done">Terminé</span></div>
-        <h3 data-i18n="proj.u3.title">jeu - Morpion</h3>
-        <p style="color:var(--muted); font-size:14px;" data-i18n="proj.u3.desc">Jeu Web avec ML.</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">HTML</span><span class="chip">CSS</span></div><span class="chip">JS</span>
+        <h3 data-i18n="proj.morpion.title">Jeu - Morpion</h3>
+        <p style="color:var(--muted); font-size:14px;" data-i18n="proj.morpion.desc">Jeu Web avec ML.</p>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JS</span>
+        </div>
         <a class="card-link" href="https://github.com/NiainaFitahiana03" target="_blank" rel="noopener" data-i18n="proj.link.github">Voir sur GitHub ↗</a>
       </div>
+
       <div class="card fade-in">
         <div class="card-top"><span class="designator">U2</span><span class="status done" data-i18n="status.done">Terminé</span></div>
         <h3 data-i18n="proj.u2.title">Site web vitrine</h3>
@@ -340,12 +349,12 @@
 
       <div class="card fade-in">
         <div class="card-top"><span class="designator">U9</span><span class="status wip" data-i18n="status.wip">En cours</span></div>
-        <h3 data-i18n="proj.u1.title">Outil de gestion de stock</h3>
-        <p style="color:var(--muted); font-size:14px;" data-i18n="proj.u1.desc">Application desktop pour suivre les entrées et sorties de stock.</p>
+        <h3 data-i18n="proj.u9.title">Outil de gestion de stock</h3>
+        <p style="color:var(--muted); font-size:14px;" data-i18n="proj.u9.desc">Application desktop pour suivre les entrées et sorties de stock.</p>
         <div class="chips"><span class="chip">C#</span></div>
         <a class="card-link disabled" data-i18n="proj.link.soon">Bientôt sur GitHub</a>
       </div>
-    
+     
     </div>
   </div>
 </section>
@@ -453,8 +462,8 @@
       "status.wip": "In progress",
       "proj.link.github": "View on GitHub ↗",
       "proj.link.soon": "Coming soon on GitHub",
-      "proj.u1.title": "Stock management tool",
-      "proj.u1.desc": "Desktop app to track stock inflows and outflows.",
+      "proj.morpion.title": "Tic-Tac-Toe Game",
+      "proj.morpion.desc": "Web game with ML.",
       "proj.u2.title": "Showcase website",
       "proj.u2.desc": "Static presentation site with a custom structure and style.",
       "proj.u3.title": "Game simulation",
@@ -469,6 +478,8 @@
       "proj.u7.desc": "Desktop application dedicated to cooking management.",
       "proj.u8.title": "Information website",
       "proj.u8.desc": "Web information platform in development.",
+      "proj.u9.title": "Stock management tool",
+      "proj.u9.desc": "Desktop app to track stock inflows and outflows.",
       "sec.competences.title": "Skills",
       "ds.langages.label": "LANGUAGES",
       "ds.outils.label": "TOOLS & FRAMEWORKS",
