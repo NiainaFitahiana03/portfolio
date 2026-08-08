@@ -7,204 +7,7 @@
 <title>Radoniaina Fitahiana Andriambolasoa — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0F1416;
-    --surface:#161E21;
-    --surface-2:#1D272B;
-    --line: rgba(143,160,163,0.18);
-    --copper:#C7824C;
-    --copper-soft: rgba(199,130,76,0.14);
-    --teal:#5FA8A2;
-    --text:#ECE9E3;
-    --muted:#8FA0A3;
-    --mono: 'JetBrains Mono', monospace;
-    --display: 'Sora', sans-serif;
-    --body: 'Inter', sans-serif;
-  }
-  *{ box-sizing:border-box; margin:0; padding:0; }
-  html{ scroll-behavior:smooth; }
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:var(--body);
-    line-height:1.6;
-    overflow-x:hidden;
-  }
-  a{ color:inherit; text-decoration:none; }
-  .wrap{ max-width:1080px; margin:0 auto; padding:0 28px; }
-
-  body::before{
-    content:"";
-    position:fixed; inset:0;
-    background-image:
-      linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size: 64px 64px;
-    opacity:0.35;
-    pointer-events:none;
-    z-index:0;
-    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 0%, transparent 70%);
-  }
-
-  header{
-    position:sticky; top:0; z-index:50;
-    backdrop-filter: blur(10px);
-    background: rgba(15,20,22,0.75);
-    border-bottom:1px solid var(--line);
-  }
-  nav{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:18px 0;
-  }
-  .brand{
-    font-family:var(--mono); font-size:14px; letter-spacing:0.5px; color:var(--copper);
-  }
-  .brand span{ color:var(--muted); }
-  .nav-links{ display:flex; gap:32px; font-size:14px; color:var(--muted); }
-  .nav-links a:hover{ color:var(--text); }
-  .lang-switch{ display:flex; gap:4px; border:1px solid var(--line); border-radius:6px; padding:3px; }
-  .lang-switch button{
-    font-family:var(--mono); font-size:12px; padding:5px 10px; border:none; border-radius:4px;
-    background:transparent; color:var(--muted); cursor:pointer; transition:all .2s ease;
-  }
-  .lang-switch button.active{ background:var(--copper); color:#141414; font-weight:600; }
-  .lang-switch button:not(.active):hover{ color:var(--text); }
-
-  .hero{
-    position:relative; z-index:1;
-    padding:120px 0 90px;
-    border-bottom:1px solid var(--line);
-  }
-  .eyebrow{
-    font-family:var(--mono); font-size:13px; color:var(--teal);
-    display:flex; align-items:center; gap:10px; margin-bottom:26px;
-  }
-  .eyebrow::before{
-    content:""; width:8px; height:8px; border-radius:50%;
-    background:var(--teal); box-shadow:0 0 10px var(--teal);
-  }
-  h1{
-    font-family:var(--display); font-weight:800;
-    font-size:clamp(38px, 6vw, 68px);
-    line-height:1.05; letter-spacing:-0.02em;
-    max-width:820px;
-  }
-  h1 .last{ color:var(--copper); }
-  .role{
-    font-family:var(--mono); font-size:16px; color:var(--muted);
-    margin-top:22px; letter-spacing:0.3px;
-  }
-  .lede{
-    max-width:560px; margin-top:22px; color:var(--muted); font-size:16px;
-  }
-  .cta-row{ display:flex; gap:14px; margin-top:38px; flex-wrap:wrap; }
-  .btn{
-    font-family:var(--mono); font-size:13px; padding:12px 20px;
-    border:1px solid var(--line); border-radius:6px;
-    display:flex; align-items:center; gap:8px;
-    transition:all .2s ease;
-  }
-  .btn:hover{ border-color:var(--copper); color:var(--copper); background:var(--copper-soft); }
-  .btn.primary{ background:var(--copper); color:#141414; border-color:var(--copper); font-weight:600;}
-  .btn.primary:hover{ opacity:0.9; background:var(--copper); color:#141414; }
-
-  .trace-svg{ position:absolute; right:0; top:0; height:100%; width:40%; opacity:0.5; pointer-events:none; }
-  .trace-path{
-    fill:none; stroke:var(--copper); stroke-width:1.5;
-    stroke-dasharray: 6 8;
-    animation: flow 6s linear infinite;
-  }
-  @keyframes flow{ to{ stroke-dashoffset: -140; } }
-  .node{ fill:var(--teal); }
-
-  section{ position:relative; z-index:1; padding:80px 0; border-bottom:1px solid var(--line); }
-  .sec-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:44px; }
-  .sec-tag{ font-family:var(--mono); font-size:12px; color:var(--copper); border:1px solid var(--copper); padding:3px 8px; border-radius:4px; }
-  .sec-title{ font-family:var(--display); font-weight:700; font-size:28px; }
-
-  .exp-card{
-    background:var(--surface); border:1px solid var(--line); border-radius:10px;
-    padding:32px; display:grid; grid-template-columns:200px 1fr; gap:28px;
-  }
-  .exp-meta{ font-family:var(--mono); font-size:13px; color:var(--muted); }
-  .exp-meta .company{ color:var(--text); font-weight:600; font-size:15px; margin-bottom:6px; display:block; }
-  .exp-role{ font-family:var(--display); font-weight:700; font-size:19px; margin-bottom:14px; }
-  ul.bullets{ list-style:none; }
-  ul.bullets li{ position:relative; padding-left:20px; margin-bottom:10px; color:var(--muted); font-size:15px; }
-  ul.bullets li::before{ content:"—"; position:absolute; left:0; color:var(--teal); }
-
-  .grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:18px; }
-  .card{
-    background:var(--surface); border:1px solid var(--line); border-radius:10px;
-    padding:24px; transition: border-color .2s ease, transform .2s ease;
-  }
-  .card:hover{ border-color:var(--copper); transform:translateY(-3px); }
-  .card-top{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; }
-  .designator{ font-family:var(--mono); font-size:12px; color:var(--copper); }
-  .status{ font-family:var(--mono); font-size:10.5px; padding:3px 8px; border-radius:20px; border:1px solid var(--line); color:var(--muted); }
-  .status.done{ color:var(--teal); border-color:var(--teal); }
-  .status.wip{ color:var(--copper); border-color:var(--copper); }
-  .card h3{ font-family:var(--display); font-size:17px; margin-bottom:10px; }
-  .chips{ display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
-  .chip{ font-family:var(--mono); font-size:11px; color:var(--muted); background:var(--surface-2); padding:4px 8px; border-radius:4px; }
-  .card-link{ display:inline-block; margin-top:16px; font-family:var(--mono); font-size:12px; color:var(--teal); }
-  .card-link.disabled{ color:var(--muted); }
-
-  .datasheet{ background:var(--surface); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
-  .ds-row{ display:grid; grid-template-columns:220px 1fr; border-bottom:1px solid var(--line); }
-  .ds-row:last-child{ border-bottom:none; }
-  .ds-label{ font-family:var(--mono); font-size:12px; color:var(--copper); padding:18px 24px; background:var(--surface-2); }
-  .ds-value{ padding:18px 24px; font-size:14.5px; color:var(--muted); }
-
-  .timeline{ position:relative; padding-left:36px; }
-  .timeline::before{ content:""; position:absolute; left:5px; top:6px; bottom:6px; width:1px; background:var(--line); }
-  .t-item{ position:relative; margin-bottom:38px; }
-  .t-item:last-child{ margin-bottom:0; }
-  .t-item::before{
-    content:""; position:absolute; left:-36px; top:4px; width:11px; height:11px;
-    border-radius:50%; background:var(--bg); border:2px solid var(--teal);
-  }
-  .t-year{ font-family:var(--mono); font-size:12px; color:var(--teal); margin-bottom:6px; }
-  .t-title{ font-family:var(--display); font-weight:700; font-size:16px; margin-bottom:10px; }
-
-  footer{ padding:80px 0 50px; position:relative; z-index:1; }
-  .contact-title{ font-family:var(--display); font-weight:800; font-size:clamp(28px,4vw,42px); max-width:600px; }
-  .contact-links{ display:flex; gap:16px; flex-wrap:wrap; margin-top:32px; }
-  .foot-bottom{ margin-top:60px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:var(--mono); font-size:12px; color:var(--muted); }
-
-  .fade-in{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
-  .fade-in.visible{ opacity:1; transform:translateY(0); }
-
-  /* LANGUES */
-  .lang-row{ display:grid; grid-template-columns:160px 1fr 60px; align-items:center; gap:18px; margin-bottom:22px; }
-  .lang-row:last-child{ margin-bottom:0; }
-  .lang-name{ font-family:var(--display); font-weight:600; font-size:15px; }
-  .lang-level{ font-family:var(--mono); font-size:11px; color:var(--muted); display:block; margin-top:2px; }
-  .lang-bar{ height:6px; border-radius:4px; background:var(--surface-2); overflow:hidden; border:1px solid var(--line); }
-  .lang-fill{ height:100%; background:linear-gradient(90deg, var(--teal), var(--copper)); border-radius:4px; }
-  .lang-pct{ font-family:var(--mono); font-size:12px; color:var(--copper); text-align:right; }
-
-  /* FORMATION - compact */
-  #formation{ padding:50px 0; }
-  #formation .sec-head{ margin-bottom:26px; }
-  #formation .sec-title{ font-size:19px; }
-  #formation .timeline{ padding-left:28px; }
-  #formation .t-item{ margin-bottom:18px; }
-  #formation .t-item::before{ left:-28px; width:8px; height:8px; }
-  #formation .t-year{ font-size:11px; margin-bottom:3px; }
-  #formation .t-title{ font-size:14px; margin-bottom:4px; }
-  #formation .t-desc{ font-size:13px; color:var(--muted); }
-
-  @media (max-width:700px){
-    .exp-card{ grid-template-columns:1fr; }
-    .ds-row{ grid-template-columns:1fr; }
-    .ds-label{ padding:12px 18px; }
-    .ds-value{ padding:12px 18px; }
-    .nav-links{ display:none; }
-    .trace-svg{ display:none; }
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -277,18 +80,12 @@
       <span class="sec-title" data-i18n="sec.projets.title">Projets personnels</span>
     </div>
     <div class="grid">
-      
       <div class="card fade-in">
         <div class="card-top"><span class="designator">U1</span><span class="status done" data-i18n="status.done">Terminé</span></div>
-        <h3 data-i18n="proj.morpion.title">Jeu - Morpion</h3>
-        <p style="color:var(--muted); font-size:14px;" data-i18n="proj.morpion.desc">Jeu Web avec ML.</p>
-        <div class="chips">
-          <span class="chip">Python</span>
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">JS</span>
-        </div>
-        <a class="card-link" href="https://github.com/NiainaFitahiana03" target="_blank" rel="noopener" data-i18n="proj.link.github">Voir sur GitHub ↗</a>
+        <h3 data-i18n="proj.u3.title">jeu - Morpion</h3>
+        <p style="color:var(--muted); font-size:14px;" data-i18n="proj.u3.desc">Jeu Web avec ML .Jeu 1 vs 1 player ou encore 1 vs Odrinateur(IA) avec niveau </p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span></div>
+        <a class="card-link" href="https://github.com/NiainaFitahiana03/jeu---morpion-ML" target="_blank" rel="noopener" data-i18n="proj.link.github">Voir sur GitHub ↗</a>
       </div>
 
       <div class="card fade-in">
@@ -350,11 +147,11 @@
       <div class="card fade-in">
         <div class="card-top"><span class="designator">U9</span><span class="status wip" data-i18n="status.wip">En cours</span></div>
         <h3 data-i18n="proj.u9.title">Outil de gestion de stock</h3>
-        <p style="color:var(--muted); font-size:14px;" data-i18n="proj.u9.desc">Application desktop pour suivre les entrées et sorties de stock.</p>
+        <p style="color:var(--muted); font-size:14px;" data-i18n="proj.u9.desc">Application desktop qui permet de suivre les entrées et sorties de produits. génère des graphiques pour l'analyse des données.</p>
         <div class="chips"><span class="chip">C#</span></div>
         <a class="card-link disabled" data-i18n="proj.link.soon">Bientôt sur GitHub</a>
       </div>
-     
+
     </div>
   </div>
 </section>
@@ -430,92 +227,7 @@
   </div>
 </footer>
 
-<script>
-  const els = document.querySelectorAll('.fade-in');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.15 });
-  els.forEach(el => io.observe(el));
-
-  const translations = {
-    en: {
-      "nav.experience": "Experience",
-      "nav.projets": "Projects",
-      "nav.competences": "Skills",
-      "nav.formation": "Education",
-      "nav.contact": "Contact",
-      "hero.eyebrow": "Antananarivo, Madagascar — available for work",
-      "hero.role": "Software Engineer & Electronics — desktop, web, mobile & embedded systems",
-      "hero.lede": "A developer trained at the intersection of software and electronics: desktop apps in C#/.NET, web and mobile experiences in React, and embedded electrical systems.",
-      "hero.cta.projects": "View projects",
-      "hero.cta.email": "Send an email",
-      "sec.experience.title": "Professional experience",
-      "exp.location": "67 Ha headquarters",
-      "exp.duration": "Internship — 3 months",
-      "exp.role": "Solo .NET / WinForms Developer",
-      "exp.b1": "Development and maintenance of desktop applications",
-      "exp.b2": "Three-month internship under the supervision of a qualified professional team",
-      "exp.b3": "Performance optimization and bug fixing",
-      "exp.b4": "Set up testing to ensure code quality and software durability",
-      "sec.projets.title": "Personal projects",
-      "status.done": "Done",
-      "status.wip": "In progress",
-      "proj.link.github": "View on GitHub ↗",
-      "proj.link.soon": "Coming soon on GitHub",
-      "proj.morpion.title": "Tic-Tac-Toe Game",
-      "proj.morpion.desc": "Web game with ML.",
-      "proj.u2.title": "Showcase website",
-      "proj.u2.desc": "Static presentation site with a custom structure and style.",
-      "proj.u3.title": "Game simulation",
-      "proj.u3.desc": "Simulation logic and rendering in a C# application.",
-      "proj.u4.title": "Web mini-game",
-      "proj.u4.desc": "Small browser-playable game.",
-      "proj.u5.title": "Cooking app",
-      "proj.u5.desc": "Mobile app for recipes and cooking tracking.",
-      "proj.u6.title": "Bus trip app",
-      "proj.u6.desc": "Mobile app to track and plan bus trips.",
-      "proj.u7.title": "Cooking desktop software",
-      "proj.u7.desc": "Desktop application dedicated to cooking management.",
-      "proj.u8.title": "Information website",
-      "proj.u8.desc": "Web information platform in development.",
-      "proj.u9.title": "Stock management tool",
-      "proj.u9.desc": "Desktop app to track stock inflows and outflows.",
-      "sec.competences.title": "Skills",
-      "ds.langages.label": "LANGUAGES",
-      "ds.outils.label": "TOOLS & FRAMEWORKS",
-      "ds.bdd.label": "DATABASES",
-      "ds.os.label": "OPERATING SYSTEMS",
-      "ds.os.value": "Windows, Linux",
-      "ds.electro.label": "ELECTRONICS",
-      "ds.electro.value": "Advanced electrical systems",
-      "ds.ontologies.label": "ONTOLOGIES",
-      "ds.ontologies.value": "Knowledge modeling, data representation and structuring via ontologies",
-      "sec.formation.title": "Education & background",
-      "form.licence.title": "Bachelor's in Computer Science — ISPM",
-      "form.licence.desc": "1st to 3rd year: showcase website, health monitoring, web mini-game, kinetic energy converter, institution management system, web/mobile home automation, building electro-computer system.",
-      "form.bac.title": "High school diploma, science track — Lycée Moderne Ampefiloha",
-      "footer.title": "Got a project in mind? Let's talk.",
-      "footer.location": "Antananarivo, Madagascar"
-    }
-  };
-
-  function setLang(lang){
-    document.documentElement.lang = lang;
-    document.querySelectorAll('[data-lang-btn]').forEach(b => b.classList.toggle('active', b.dataset.langBtn === lang));
-    if(lang === 'fr'){
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        if(el.dataset.frOriginal){ el.innerHTML = el.dataset.frOriginal; }
-      });
-      return;
-    }
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      if(!el.dataset.frOriginal){ el.dataset.frOriginal = el.innerHTML; }
-      const key = el.getAttribute('data-i18n');
-      const val = translations[lang] && translations[lang][key];
-      if(val){ el.innerHTML = val; }
-    });
-  }
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
