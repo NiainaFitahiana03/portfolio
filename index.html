@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radoniaina Fitahiana Andriambolasoa — Portfolio</title>
+<meta name="description" content="Informaticien &amp; électronicien — logiciel, web, mobile et systèmes embarqués.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="mark" href="#top" aria-label="Accueil">
+      <span class="mark-bracket">[</span>RFA<span class="mark-bracket">]</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#experience" data-i18n="nav.exp">Expérience</a>
+      <a href="#projets" data-i18n="nav.projects">Projets</a>
+      <a href="#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="#formation" data-i18n="nav.education">Formation</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="header-controls">
+      <div class="lang-switch" role="group" aria-label="Langue">
+        <button type="button" class="lang-btn is-active" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <p class="eyebrow" data-i18n="hero.location">Antananarivo, Madagascar — disponible pour missions</p>
+        <h1 class="hero-name">Radoniaina Fitahiana<br>Andriambolasoa</h1>
+        <p class="hero-role" data-i18n="hero.role">Informaticien &amp; Électronique — logiciel, web, mobile &amp; systèmes embarqués</p>
+        <p class="hero-bio" data-i18n="hero.bio">Développeur formé au croisement du logiciel et de l'électronique&nbsp;: applications desktop en C#/.NET, expériences web et mobile en React, et systèmes électriques embarqués.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projets" data-i18n="hero.cta.projects">Voir les projets</a>
+          <a class="btn btn-ghost" href="https://github.com/NiainaFitahiana03" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/niaina-fitahiana-78a1a8317" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <aside class="spec-card" aria-label="Fiche technique">
+        <p class="spec-title" data-i18n="hero.spec.title">Fiche technique</p>
+        <dl>
+          <div class="spec-row">
+            <dt data-i18n="hero.spec.location">Localisation</dt>
+            <dd>Antananarivo, MG</dd>
+          </div>
+          <div class="spec-row">
+            <dt data-i18n="hero.spec.profile">Profil</dt>
+            <dd data-i18n="hero.spec.profileValue">Logiciel &amp; électronique</dd>
+          </div>
+          <div class="spec-row">
+            <dt data-i18n="hero.spec.stack">Stack clé</dt>
+            <dd>C#/.NET · React · Python</dd>
+          </div>
+          <div class="spec-row">
+            <dt data-i18n="hero.spec.status">Disponibilité</dt>
+            <dd data-i18n="hero.spec.statusValue">Ouvert aux missions</dd>
+          </div>
+        </dl>
+        <a class="spec-contact" href="mailto:niainafitahiana03@gmail.com" data-i18n="hero.cta.mail">Écrire un email</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="wrap">
+      <h2 class="section-title" data-i18n="exp.title">Expérience professionnelle</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-meta">
+            <span class="badge">2026</span>
+            <span class="badge badge-outline" data-i18n="exp.duration">Stage — 3 mois</span>
+          </div>
+          <h3 class="timeline-role" data-i18n="exp.role">Développeur solo .NET / WinForms</h3>
+          <p class="timeline-org">NY HAVANA — 67 Ha, Antananarivo</p>
+          <ul class="timeline-list">
+            <li data-i18n="exp.b1">Développement et maintenance d'applications desktop</li>
+            <li data-i18n="exp.b2">Stage de trois mois sous la supervision d'une équipe de professionnels qualifiés</li>
+            <li data-i18n="exp.b3">Optimisation des performances du logiciel et correction des bugs</li>
+            <li data-i18n="exp.b4">Mise en place de tests pour assurer la qualité du code et la durabilité du logiciel</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="projets">
+    <div class="wrap">
+      <h2 class="section-title" data-i18n="proj.title">Projets personnels</h2>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-head"><span class="tag">U1</span><span class="status status-done" data-i18n="status.done">Terminé</span></div>
+          <h3 data-i18n="proj.u1.title">Jeu — Morpion</h3>
+          <p data-i18n="proj.u1.desc">Jeu web avec ML. 1 vs 1 joueur, ou 1 vs ordinateur (IA) avec plusieurs niveaux.</p>
+          <div class="stack"><span>Python</span><span>HTML</span><span>CSS</span><span>JS</span></div>
+          <a class="project-link" href="https://github.com/NiainaFitahiana03/jeu---morpion-ML" target="_blank" rel="noopener" data-i18n="proj.github">Voir sur GitHub ↗</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head"><span class="tag">U2</span><span class="status status-done" data-i18n="status.done">Terminé</span></div>
+          <h3 data-i18n="proj.u2.title">Site web vitrine</h3>
+          <p data-i18n="proj.u2.desc">Site de présentation statique, structure et style personnalisés.</p>
+          <div class="stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          <a class="project-link" href="https://github.com/NiainaFitahiana03" target="_blank" rel="noopener" data-i18n="proj.github">Voir sur GitHub ↗</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head"><span class="tag">U3</span><span class="status status-done" data-i18n="status.done">Terminé</span></div>
+          <h3 data-i18n="proj.u3.title">Simulation de jeu</h3>
+          <p data-i18n="proj.u3.desc">Logique de simulation et rendu en application C#.</p>
+          <div class="stack"><span>C#</span></div>
+          <a class="project-link" href="https://github.com/NiainaFitahiana03" target="_blank" rel="noopener" data-i18n="proj.github">Voir sur GitHub ↗</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head"><span class="tag">U4</span><span class="status status-done" data-i18n="status.done">Terminé</span></div>
+          <h3 data-i18n="proj.u4.title">Mini jeu web</h3>
+          <p data-i18n="proj.u4.desc">Petit jeu jouable directement dans le navigateur.</p>
+          <div class="stack"><span>HTML</span><span>JS</span><span>CSS</span></div>
+          <a class="project-link" href="https://github.com/NiainaFitahiana03" target="_blank" rel="noopener" data-i18n="proj.github">Voir sur GitHub ↗</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head"><span class="tag">U5</span><span class="status status-done" data-i18n="status.done">Terminé</span></div>
+          <h3 data-i18n="proj.u5.title">Application culinaire</h3>
+          <p data-i18n="proj.u5.desc">Application mobile de recettes et de suivi culinaire.</p>
+          <div class="stack"><span>React Native</span></div>
+          <span class="project-link project-link-soon" data-i18n="proj.soon">Bientôt sur GitHub</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head"><span class="tag">U6</span><span class="status status-progress" data-i18n="status.progress">En cours</span></div>
+          <h3 data-i18n="proj.u6.title">Application de trajets de bus</h3>
+          <p data-i18n="proj.u6.desc">Application mobile pour suivre et planifier des trajets de bus.</p>
+          <div class="stack"><span>React Native</span></div>
+          <span class="project-link project-link-soon" data-i18n="proj.soon">Bientôt sur GitHub</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head"><span class="tag">U7</span><span class="status status-progress" data-i18n="status.progress">En cours</span></div>
+          <h3 data-i18n="proj.u7.title">Logiciel Windows culinaire</h3>
+          <p data-i18n="proj.u7.desc">Application desktop dédiée à la gestion culinaire.</p>
+          <div class="stack"><span>C#</span></div>
+          <span class="project-link project-link-soon" data-i18n="proj.soon">Bientôt sur GitHub</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head"><span class="tag">U8</span><span class="status status-progress" data-i18n="status.progress">En cours</span></div>
+          <h3 data-i18n="proj.u8.title">Site web de renseignement</h3>
+          <p data-i18n="proj.u8.desc">Plateforme web d'information, en développement.</p>
+          <div class="stack"><span>React</span></div>
+          <span class="project-link project-link-soon" data-i18n="proj.soon">Bientôt sur GitHub</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head"><span class="tag">U9</span><span class="status status-progress" data-i18n="status.progress">En cours</span></div>
+          <h3 data-i18n="proj.u9.title">Outil de gestion de stock</h3>
+          <p data-i18n="proj.u9.desc">Application desktop qui suit les entrées et sorties de produits, et génère des graphiques d'analyse.</p>
+          <div class="stack"><span>C#</span></div>
+          <span class="project-link project-link-soon" data-i18n="proj.soon">Bientôt sur GitHub</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="competences">
+    <div class="wrap">
+      <h2 class="section-title" data-i18n="skills.title">Compétences</h2>
+      <div class="skills-grid">
+        <div class="skills-group">
+          <h3 data-i18n="skills.languages">Langages</h3>
+          <div class="chip-list"><span>C#</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>TypeScript</span></div>
+        </div>
+        <div class="skills-group">
+          <h3 data-i18n="skills.tools">Outils &amp; frameworks</h3>
+          <div class="chip-list"><span>WordPress</span><span>Bootstrap</span><span>Angular</span><span>Blender</span><span>Word</span><span>Excel</span><span>Photoshop</span><span>PowerPoint</span></div>
+        </div>
+        <div class="skills-group">
+          <h3 data-i18n="skills.db">Bases de données</h3>
+          <div class="chip-list"><span>MySQL</span><span>SQLite</span><span>MongoDB</span></div>
+        </div>
+        <div class="skills-group">
+          <h3 data-i18n="skills.os">Systèmes d'exploitation</h3>
+          <div class="chip-list"><span>Windows</span><span>Linux</span></div>
+        </div>
+        <div class="skills-group">
+          <h3 data-i18n="skills.electronics">Électronique</h3>
+          <div class="chip-list"><span data-i18n="skills.electronicsValue">Systèmes électriques avancés</span></div>
+        </div>
+        <div class="skills-group">
+          <h3 data-i18n="skills.ontologies">Ontologies</h3>
+          <div class="chip-list"><span data-i18n="skills.ontologiesValue">Modélisation de connaissances, représentation et structuration de données</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="formation">
+    <div class="wrap">
+      <h2 class="section-title" data-i18n="edu.title">Formation &amp; parcours</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-meta"><span class="badge">2021 — 2024</span></div>
+          <h3 class="timeline-role" data-i18n="edu.degree1">Licence en Informatique — ISPM</h3>
+          <p class="timeline-org" data-i18n="edu.degree1desc">1ère à 3ème année&nbsp;: site vitrine, surveillance de santé, mini jeu web, convertisseur d'énergie cinétique, gestion d'établissement, domotique web/mobile, système électro-bâtiment.</p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-meta"><span class="badge">2020 — 2021</span></div>
+          <h3 class="timeline-role" data-i18n="edu.degree2">Baccalauréat, série D — Lycée Moderne Ampefiloha</h3>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <div class="wrap contact-inner">
+      <h2 class="section-title" data-i18n="contact.title">Un projet en tête&nbsp;? Parlons-en.</h2>
+      <div class="contact-links">
+        <a href="mailto:niainafitahiana03@gmail.com">niainafitahiana03@gmail.com</a>
+        <a href="tel:+261341623055">+261 34 16 230 55</a>
+        <a href="https://github.com/NiainaFitahiana03" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/niaina-fitahiana-78a1a8317" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Antananarivo, Madagascar — © 2026 Radoniaina Fitahiana Andriambolasoa</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
